@@ -12,7 +12,6 @@ def sumExists(sum):
 
 def iteration():
     for i in range(99, 1, -1):
-        print(i)
         if not sumExists(i):
             return i
     return 0
