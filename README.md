@@ -3,5 +3,5 @@ Treat the problem of the sum of subsets with repetition (SPR). An example may be
 
 C++ Version: works
 
-Java Version: Exception Stack Overflow
+Java Version: works
 
