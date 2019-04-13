@@ -1,5 +1,6 @@
 package victini378.spr;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -7,28 +8,26 @@ import java.io.IOException;
 
 public class SPR {
 	
-	static short n;
-	private static File f;
-	private static FileReader in;
+	private static short n;
+	private static BufferedReader in;
 	private static FileWriter out;
 	private static short[] v;
-
+	
 	public static void main(String[] args) throws IOException {
-		in = new FileReader(new File("input.txt").getAbsolutePath());
-		n = (short) in.read();
+		in = new BufferedReader(new FileReader(new File("input.txt").getAbsolutePath()));
+		n = (short) Integer.parseInt(in.readLine());
 		v = new short[n];
 
-		//for(short i : v) i = (short) in.read();
-		v[0]=4;
-		v[1]=5;
-		v[2]=7;
-		
-		iteration();
-		
-		f = new File("output.txt");
+		for(short i=0; i<n; i++) v[i] = (short) Integer.parseInt(in.readLine());
+		in.close();
+
+		File f = new File("output.txt");
 		f.createNewFile();
-		out = new FileWriter("output.txt");
-		out.write(iteration());
+		out = new FileWriter(f);
+		//System.out.print(iteration());
+		out.write(Integer.toString(iteration()));
+		out.flush();
+		out.close();
 	}
 	
 	static short iteration(){
