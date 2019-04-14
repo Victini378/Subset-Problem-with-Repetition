@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class SPR {
 	
@@ -31,6 +32,7 @@ public class SPR {
 	}
 	
 	static short iteration(){
+		Arrays.sort(v);
 		for(short found=99; found>0; found--)
 			if(!sumExists(found)) return found;
 		return 0;
