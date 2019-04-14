@@ -4,6 +4,10 @@
 
 short* v, n;
 
+/*int cmp(const void * a, const void * b){
+   return (*(int*)a - *(int*)b);
+}*/
+
 bool sumExists(short sum){
   if(sum == 0) return true;
 
@@ -14,7 +18,7 @@ bool sumExists(short sum){
 }
 
 short iteration(void){
-  //std::sort(v, v+n);
+  //qsort(v, n, sizeof(short), cmp);
   for(short found=99; found>0; found--)
     if(!sumExists(found)) return found;
   return 0;
