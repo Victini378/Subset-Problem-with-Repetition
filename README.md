@@ -7,3 +7,4 @@ Treat the problem of the sum of subsets with repetition (**SPR**). An example ma
 
 **Python Implementation:** works
 
+**C Implementation:** works
