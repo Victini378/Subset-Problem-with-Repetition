@@ -11,6 +11,7 @@ def sumExists(sum):
     return False
 
 def iteration():
+    v.sort()
     for i in range(99, 1, -1):
         if not sumExists(i):
             return i
